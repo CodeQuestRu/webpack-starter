@@ -1,5 +1,8 @@
 const { merge } = require('webpack-merge');
 
+// Настройки
+const options = require('./config/app');
+
 // Базовая конфигурация
 const common = require('./webpack.common');
 
@@ -9,5 +12,13 @@ module.exports = merge(common, {
   mode: 'development',
 
   // Sourcemaps
-  devtool: 'inline-source-map'
+  devtool: 'inline-source-map',
+
+  // Сервер
+  devServer: options.devServer,
+
+  // Оптимизация
+  optimization: {
+    runtimeChunk: 'single',
+  },
 })

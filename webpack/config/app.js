@@ -10,13 +10,19 @@ module.exports = {
 
   // Входные точки
   entry: [
-    source + '/index.js'
+    source + '/main.js'
   ],
 
   // Выходная точка
   output: {
     path: build,
-    filename: 'main.js'
+    filename: '[name].bundle.js',
+    clean: true
+  },
+
+  // Сервер
+  devServer: {
+    static: build
   },
 
 

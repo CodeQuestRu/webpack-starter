@@ -10,8 +10,9 @@ const options = require('./config/app');
 const cssLoader = require('./module/css');
 const babelLoader = require('./module/babel');
 
+
 // Базовая конфигурация
-module.exports = merge({
+const common = {
   // Режим
   mode: 'none',
 
@@ -28,7 +29,12 @@ module.exports = merge({
     // Формирование шаблона
     new HtmlWebpackPlugin(options.html_webpack_plugin)
   ]
-},
+};
+
+
+// Общие модули
+module.exports = merge(
+  common,
   cssLoader,
   babelLoader
 );

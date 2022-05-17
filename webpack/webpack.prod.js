@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge');
 
 // Плагины
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 // Базовая конфигурация
 const common = require('./webpack.common');
@@ -16,7 +16,6 @@ module.exports = merge(common, {
 
   // Плагины
   plugins: [
-    // Удаление конечной директории
-    // new CleanWebpackPlugin(),
+
   ]
 })

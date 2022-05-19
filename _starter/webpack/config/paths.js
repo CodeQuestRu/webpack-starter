@@ -9,6 +9,9 @@ module.exports = {
   // Путь до исходной директории
   source: resolve(root, './src'),
 
+  // Файлы
+  assets: resolve(root, './src/assets'),
+
   // Путь до конечной директории
   build: resolve(root, './dist'),
 

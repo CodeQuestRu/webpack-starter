@@ -7,27 +7,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const options = require('./config/app');
 
 // Модули
-const cssLoader = require('./module/css');
-const babelLoader = require('./module/babel');
+const loadCSS = require('./module/css');
+const loadBabel = require('./module/babel');
+const loadImage = require('./module/image');
+const loadSvg = require('./module/svg');
+const loadFont = require('./module/font');
 
 
 // Базовая конфигурация
 const common = {
-  // Режим
-  mode: 'none',
-
-  // Sourcemaps
-  devtool: false,
-
   // Точки входа
   entry: options.entry,
-
   // Точки выхода
   output: options.output,
 
   plugins: [
     // Формирование шаблона
-    new HtmlWebpackPlugin(options.html_webpack_plugin)
+    new HtmlWebpackPlugin(options.html_wp)
   ]
 };
 
@@ -35,6 +31,9 @@ const common = {
 // Общие модули
 module.exports = merge(
   common,
-  cssLoader,
-  babelLoader
+  loadCSS(),
+  loadBabel(),
+  loadImage(),
+  loadSvg(),
+  loadFont(),
 );

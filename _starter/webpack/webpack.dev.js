@@ -12,7 +12,7 @@ module.exports = merge(common, {
   mode: 'development',
 
   // Sourcemaps
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-eval-source-map',
 
   // Сервер
   devServer: options.devServer,

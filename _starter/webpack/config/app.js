@@ -1,4 +1,10 @@
-const { root, source, build, starter } = require('./paths');
+const {
+  root,
+  source,
+  assets,
+  build,
+  starter
+} = require('./paths');
 
 
 module.exports = {
@@ -6,7 +12,6 @@ module.exports = {
   /**
    * Базовые настройки
   */
-
 
   // Входные точки
   entry: [
@@ -16,7 +21,7 @@ module.exports = {
   // Выходная точка
   output: {
     path: build,
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js', // Поддержка кеширования
     clean: true
   },
 
@@ -31,24 +36,35 @@ module.exports = {
   */
 
   // Style Loader
-  style_loader: {},
+  style: {},
 
   // Css Loader
-  css_loader: {
+  css: {
     importLoaders: 1
   },
 
   // PostCSS Loader
-  postcss_loader: {},
+  postcss: {},
 
   // Less Loader
-  less_loader: {},
+  less: {},
 
   // Sass Loader
-  sass_loader: {},
+  sass: {},
 
   // Babel
   babel: {},
+
+  // XML
+  xml: {},
+
+  // CSV
+  csv: {},
+
+  // SVG
+  svg: {
+    name: assets + `/[name].[ext]`
+  },
 
 
   /**
@@ -56,7 +72,7 @@ module.exports = {
   */
 
   // HTML Webpack Plugin
-  html_webpack_plugin: {
+  html_wp: {
     template: starter + '/static/template.html',
     title: 'Webpack-starter by CodeQuest'
   }

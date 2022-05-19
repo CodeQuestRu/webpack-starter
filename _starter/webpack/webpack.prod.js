@@ -11,11 +11,22 @@ module.exports = merge(common, {
   // Режим
   mode: 'production',
 
-  // Sourcemaps
-  devtool: 'source-map',
-
   // Плагины
   plugins: [
 
-  ]
+  ],
+
+  // Оптимизация
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
 })

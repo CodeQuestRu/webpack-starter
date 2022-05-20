@@ -6,16 +6,20 @@ const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = () => {
   return {
-    plugins: [
-      !devMode && new MiniCssExtractPlugin()
-    ],
+    // plugins: [
+    //   !devMode && new MiniCssExtractPlugin()
+    // ],
     module: {
       rules: [
         {
           test: /\.css$/,
           use: [
+            // {
+            //   loader: devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+            //   options: options.style
+            // },
             {
-              loader: devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+              loader: "style-loader",
               options: options.style
             },
             {

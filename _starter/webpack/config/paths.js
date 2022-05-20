@@ -16,5 +16,5 @@ module.exports = {
   build: resolve(root, './dist'),
 
   // Путь до папки webpack
-  starter: resolve(root, './webpack'),
+  starter: resolve(root, './_starter/webpack'),
 }

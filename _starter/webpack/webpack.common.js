@@ -11,7 +11,7 @@ const loadCSS = require('./module/css');
 const loadBabel = require('./module/babel');
 const loadImage = require('./module/image');
 const loadSvg = require('./module/svg');
-const loadFont = require('./module/font');
+const loadFont = require('./module/fonts');
 
 
 // Базовая конфигурация
@@ -20,6 +20,10 @@ const common = {
   entry: options.entry,
   // Точки выхода
   output: options.output,
+  // Расширения для импорта
+  resolve: {
+    extensions: options.extensions
+  },
 
   plugins: [
     // Формирование шаблона
@@ -31,9 +35,9 @@ const common = {
 // Общие модули
 module.exports = merge(
   common,
-  loadCSS(),
   loadBabel(),
-  loadImage(),
-  loadSvg(),
-  loadFont(),
+  loadCSS(),
+  // loadImage(),
+  // loadSvg(),
+  // loadFont(),
 );

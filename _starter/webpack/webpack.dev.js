@@ -12,13 +12,13 @@ module.exports = merge(common, {
   mode: 'development',
 
   // Sourcemaps
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
 
   // Сервер
   devServer: options.devServer,
 
   // Оптимизация
-  optimization: {
-    runtimeChunk: 'single',
-  },
+  // optimization: {
+  //   runtimeChunk: 'single',
+  // },
 })

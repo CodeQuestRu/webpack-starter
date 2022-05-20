@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////
-// Базовый прессет
+// Прессет для TypeScript
 
 module.exports = [
-  '@babel/env',
+  '@babel/typescript',
   {
-    debug: true
+
   }
-];
+]

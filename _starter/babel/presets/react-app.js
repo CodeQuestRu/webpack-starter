@@ -4,6 +4,6 @@
 module.exports = [
   'react-app',
   {
-
+    typescript: true
   }
 ]

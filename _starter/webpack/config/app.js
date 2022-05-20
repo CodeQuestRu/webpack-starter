@@ -15,7 +15,7 @@ module.exports = {
 
   // Входные точки
   entry: [
-    source + '/main.js'
+    source + '/index.tsx'
   ],
 
   // Выходная точка
@@ -30,6 +30,9 @@ module.exports = {
     static: build
   },
 
+  // Расширения для импорта
+  extensions: [".ts", ".tsx", ".js"],
+
 
   /**
    * Лоадеры
@@ -40,7 +43,8 @@ module.exports = {
 
   // Css Loader
   css: {
-    importLoaders: 1
+    importLoaders: 1,
+    modules: true
   },
 
   // PostCSS Loader
@@ -64,6 +68,11 @@ module.exports = {
   // SVG
   svg: {
     name: assets + `/[name].[ext]`
+  },
+
+  // TypeScript
+  typescript: {
+
   },
 
 

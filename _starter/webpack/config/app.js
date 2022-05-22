@@ -70,10 +70,16 @@ module.exports = {
     name: assets + `/[name].[ext]`
   },
 
-  // TypeScript
-  typescript: {
+  // SVGR
+  svgr: {},
+
+  // SVG Sprite
+  svg_sprite: {
 
   },
+
+  // TypeScript
+  typescript: {},
 
 
   /**

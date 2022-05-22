@@ -1,4 +1,6 @@
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: #eee;
+  color: #555;
+
+  background: url('./assets/icons/add.svg') no-repeat top right;
 }

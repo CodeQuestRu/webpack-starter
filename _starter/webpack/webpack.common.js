@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 
 // Плагины
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 // Настройки
 const options = require('./config/app');
@@ -27,7 +28,11 @@ const common = {
 
   plugins: [
     // Формирование шаблона
-    new HtmlWebpackPlugin(options.html_wp)
+    new HtmlWebpackPlugin(options.html_wp),
+
+    // new SpriteLoaderPlugin({
+    //   plainSprite: true
+    // })
   ]
 };
 
@@ -38,6 +43,6 @@ module.exports = merge(
   loadBabel(),
   loadCSS(),
   // loadImage(),
-  // loadSvg(),
+  loadSvg(),
   // loadFont(),
 );

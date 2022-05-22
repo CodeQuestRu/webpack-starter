@@ -4,6 +4,6 @@
 module.exports = [
   '@babel/env',
   {
-    debug: true
+    debug: false
   }
 ];

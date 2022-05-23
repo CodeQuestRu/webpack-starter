@@ -5,11 +5,11 @@ import '../../style.css';
 import cl from './App.module.css';
 
 // SVG
-import AddIcon from '../../assets/icons/add.svg?sprite';
+import AddIcon from '@icons/add.svg?sprite';
 
 // Спрайты
-import ArrowIcon from '../../assets/icons/arrow.svg?sprite';
-import CbIcon from '../../assets/icons/cb.svg?sprite';
+import ArrowIcon from '@icons/arrow.svg?sprite';
+import CbIcon from '@icons/cb.svg?sprite';
 
 
 // console.log(AddIcon);

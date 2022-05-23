@@ -17,4 +17,7 @@ module.exports = {
 
   // Путь до папки webpack
   starter: resolve(root, './_starter/webpack'),
+
+  // Лоадеры
+  loaders: resolve(root, './_starter/webpack/loaders'),
 }

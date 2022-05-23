@@ -1,36 +1,30 @@
-import React, { cloneElement } from 'react';
+import React from 'react';
 
 // Стили
 import '../../style.css';
 import cl from './App.module.css';
 
 // SVG
-import AddIcon from '../../assets/icons/add.svg';
-// import ArrowIcon from '../../assets/icons/arrow.svg';
-// import CbIcon from '../../assets/icons/cb.svg';
+import AddIcon from '../../assets/icons/add.svg?sprite';
 
-console.log(AddIcon);
+// Спрайты
+import ArrowIcon from '../../assets/icons/arrow.svg?sprite';
+import CbIcon from '../../assets/icons/cb.svg?sprite';
+
+
+// console.log(AddIcon);
 
 
 export default function App() {
-
-  const SvgIcon = function () {
-    return <svg viewBox={AddIcon.viewBox} width="50">
-      <use xlinkHref={'#' + AddIcon.id} />
-    </svg>
-  };
-
-  // const svgComponent = cloneElement(AddIcon, {});
 
   return (
     <div className="app">
       <h1 className={cl.h}>Webpack Starter</h1>
 
-      <SvgIcon />
+      <AddIcon width="50" />
 
-      {/* <AddIcon />
-      <ArrowIcon />
-      <CbIcon /> */}
+      <ArrowIcon width="50" />
+      <CbIcon width="50" />
     </div>
-  )
+  );
 }

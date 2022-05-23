@@ -3,7 +3,8 @@ const {
   source,
   assets,
   build,
-  starter
+  starter,
+  loaders
 } = require('./paths');
 
 
@@ -65,6 +66,15 @@ module.exports = {
   // CSV
   csv: {},
 
+  // Изображения
+  image: {
+    plugins: [
+      ["gifsicle", { interlaced: true }],
+      ["jpegtran", { progressive: true }],
+      ["optipng", { optimizationLevel: 5 }],
+    ]
+  },
+
   // SVG
   svg: {
     name: assets + `/[name].[ext]`
@@ -75,7 +85,7 @@ module.exports = {
 
   // SVG Sprite
   svg_sprite: {
-
+    runtimeGenerator: loaders + '/svg-sprite-loader/runtime-generator'
   },
 
   // TypeScript

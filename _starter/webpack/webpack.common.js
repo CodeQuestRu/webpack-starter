@@ -8,11 +8,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const options = require('./config/app');
 
 // Модули
-const loadCSS = require('./module/css');
+const loadLess = require('./module/less');
 const loadBabel = require('./module/babel');
-const loadImage = require('./module/image');
+// const loadImage = require('./module/image');
 const loadSvg = require('./module/svg');
-const loadFont = require('./module/fonts');
+// const loadFont = require('./module/fonts');
 
 
 // Базовая конфигурация
@@ -41,7 +41,7 @@ const common = {
 module.exports = merge(
   common,
   loadBabel(),
-  loadCSS(),
+  loadLess(),
   // loadImage(),
   loadSvg(),
   // loadFont(),

@@ -4,10 +4,14 @@ const {
   assets,
   build,
   starter,
-  loaders
+  loaders,
+  webpack
 } = require('./paths');
 
+// Вставка переменных
+const themeVariables = require(webpack + '/data/antd-variables');
 
+// Конфигурация
 module.exports = {
 
   /**
@@ -52,7 +56,12 @@ module.exports = {
   postcss: {},
 
   // Less Loader
-  less: {},
+  less: {
+    lessOptions: {
+      javascriptEnabled: true,
+      modifyVars: themeVariables
+    }
+  },
 
   // Sass Loader
   sass: {},
@@ -98,7 +107,7 @@ module.exports = {
 
   // HTML Webpack Plugin
   html_wp: {
-    template: starter + '/static/template.html',
+    template: webpack + '/static/template.html',
     title: 'Webpack-starter by CodeQuest'
   }
 }

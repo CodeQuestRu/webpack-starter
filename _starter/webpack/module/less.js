@@ -1,3 +1,6 @@
+// Настройки
+const options = require('../config/app');
+
 module.exports = () => {
   return {
     module: {

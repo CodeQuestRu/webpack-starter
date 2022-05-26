@@ -2,7 +2,6 @@ const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 // Настройки
 const options = require('../config/app');
-const { loaders } = require('../config/paths');
 
 
 module.exports = () => {

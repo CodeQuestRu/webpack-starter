@@ -26,6 +26,9 @@
       ],
       "@icons/*": [
         "./assets/icons/*"
+      ],
+      "@uikit/*": [
+        "./components/*"
       ]
     }
   },

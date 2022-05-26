@@ -7,7 +7,8 @@ module.exports = [
     root: ['./src'],
     alias: {
       '@assets': './src/assets',
-      '@icons': './src/assets/icons'
+      '@icons': './src/assets/icons',
+      '@uikit': './src/components',
     },
   },
 ];

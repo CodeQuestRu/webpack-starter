@@ -6,7 +6,7 @@ module.exports = () => {
     module: {
       rules: [
         {
-          test: /\.less$/,
+          test: /\.(less)$/i,
           use: [
             {
               loader: "style-loader",

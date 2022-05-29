@@ -7,8 +7,8 @@ module.exports = () => {
       rules: [
         {
           test: /\.(js|jsx|ts|tsx)$/,
-          // exclude: /(node_modules|bower_components)/,
-          // include: paths.source,
+          exclude: /(node_modules|bower_components)/,
+          include: paths.source,
           use: {
             loader: 'babel-loader',
             options: options.babel

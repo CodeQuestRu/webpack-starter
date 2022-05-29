@@ -1,0 +1,14 @@
+// https://stackoverflow.com/questions/58638755/typescript-overload-edit-given-types-by-3rd-library-component-in-react-js
+
+declare module 'antd/lib/button' {
+  const ButtonTypes: ['default', 'primary', 'ghost', 'dashed', 'link', 'danger'];
+  export type ButtonType = typeof ButtonTypes[number];
+
+  // export interface BaseButtonProps {
+  //   type?: 'default' | 'primary' | 'ghost' | 'dashed' | 'link' | 'danger';
+  // }
+
+  // export interface ButtonProps {
+  //   type?: 'default' | 'primary' | 'ghost' | 'dashed' | 'link' | 'danger';
+  // }
+}

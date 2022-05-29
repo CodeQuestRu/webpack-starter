@@ -1,7 +1,7 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const options = require('../config/app');
-const devMode = process.env.NODE_ENV !== "production";
+// const devMode = process.env.NODE_ENV !== "production";
 
 
 module.exports = () => {
@@ -26,10 +26,10 @@ module.exports = () => {
               loader: "css-loader",
               options: options.css
             },
-            {
-              loader: 'postcss-loader',
-              options: options.postcss
-            },
+            // {
+            //   loader: 'postcss-loader',
+            //   options: options.postcss
+            // },
           ]
         }
       ]

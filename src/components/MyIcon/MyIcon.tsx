@@ -1,5 +1,5 @@
 import React from 'react';
-import AddIcon from '@assets/icons/add.svg';
+import AddIcon from '@icons/add.svg';
 
 export default function MyIcon() {
   return (

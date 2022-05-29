@@ -18,18 +18,18 @@ module.exports = {
   // '@html-selector': 'html',
 
   // -------- Colors -----------
-  '@primary-color': colors.clear_blue,
-  '@focus-color': colors.light_blue,
-  '@info-color': colors.clear_blue,
+  '@primary-color': colors.blue.clear,
+  '@focus-color': colors.blue.light,
+  '@info-color': colors.blue.clear,
   '@success-color': colors.topaz,
-  '@processing-color': colors.clear_blue,
-  '@error-color': colors.dark_red,
+  '@processing-color': colors.blue.clear,
+  '@error-color': colors.red.dark,
   '@highlight-color': colors.orange,
   '@warning-color': colors.orange,
-  '@normal-color': colors.cool_grey_blue,
+  '@normal-color': colors.grey.cool_blue,
   '@white': colors.white,
   '@black': colors.black,
-  '@placeholder-color': colors.cool_grey_blue,
+  '@placeholder-color': colors.grey.cool_blue,
 
   // Color used by default to control hover and active backgrounds and for
   // alert info backgrounds.
@@ -50,7 +50,7 @@ module.exports = {
   // ---
 
   // Background color for `<body>`
-  '@body-background': colors.pale_grey_two,
+  '@body-background': colors.grey.pale_two,
   // Base background color for most components
   '@component-background': '#fff',
   // Popover background color
@@ -58,12 +58,12 @@ module.exports = {
   '@font-family':
     'PF Din Display Pro, Museo Sans Cyrl, Roboto, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Noto Sans sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji',
   // '@code-family': "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace",
-  '@text-color': colors.dark_blue,
-  '@text-color-secondary': colors.cool_grey_blue,
+  '@text-color': colors.blue.dark,
+  '@text-color-secondary': colors.grey.cool_blue,
   '@text-color-inverse': colors.white,
-  '@icon-color': 'inherit', // colors.clear_blue ?
+  '@icon-color': 'inherit', // colors.blue.clear ?
   '@icon-color-hover': colors.orange,
-  '@heading-color': colors.dark_blue,
+  '@heading-color': colors.blue.dark,
   // '@heading-color-dark': fade(colors.white, 100%),
   // '@text-color-dark': fade(colors.white, 85%),
   // '@text-color-secondary-dark': fade(colors.white, 65%),
@@ -96,7 +96,7 @@ module.exports = {
   // The background colors for active and hover states for things like
   // list items or table cells.
   '@item-active-bg': '@primary-1',
-  '@item-hover-bg': colors.pale_grey_two,
+  '@item-hover-bg': colors.grey.pale_two,
 
   // ICONFONT
   // '@iconfont-css-prefix': 'anticon',
@@ -136,12 +136,12 @@ module.exports = {
   '@outline-width': '2px',
   '@outline-color': '@focus-color',
 
-  '@background-color-light': colors.pale_grey_two, // background of header and selected item
+  '@background-color-light': colors.grey.pale_two, // background of header and selected item
   '@background-color-base': colors.grey, // Default grey background color
 
   // Disabled states
-  '@disabled-color': colors.cool_grey_blue,
-  '@disabled-bg': colors.light_grey,
+  '@disabled-color': colors.grey.cool_blue,
+  '@disabled-bg': colors.grey.light,
   // '@disabled-color-dark': fade('#fff', 35%),
 
   // Shadow
@@ -230,18 +230,18 @@ module.exports = {
   // Radio
   '@radio-size': '16px',
   '@radio-dot-color': '@primary-color',
-  '@radio-dot-disabled-color': colors.light_grey,
+  '@radio-dot-disabled-color': colors.grey.light,
   // // solid text-color
   // '@radio-solid-checked-color': '@component-background',
 
   // Radio buttons
   '@radio-button-bg': '@white',
-  '@radio-button-checked-bg': colors.clear_blue,
-  '@radio-button-color': colors.dark_blue,
+  '@radio-button-checked-bg': colors.blue.clear,
+  '@radio-button-color': colors.blue.dark,
   // '@radio-button-hover-color': '@white',
-  '@radio-button-active-color': colors.dark_clear_blue,
-  '@radio-disabled-button-checked-bg': colors.light_grey,
-  '@radio-disabled-button-checked-color': colors.cool_grey_blue,
+  '@radio-button-active-color': colors.blue.dark_clear,
+  '@radio-disabled-button-checked-bg': colors.grey.light,
+  '@radio-disabled-button-checked-color': colors.grey.cool_blue,
 
   // Media queries breakpoints
 
@@ -409,7 +409,7 @@ module.exports = {
   // Tooltip max width
   '@tooltip-max-width': '151px',
   // Tooltip text color
-  '@tooltip-color': colors.cool_grey_blue,
+  '@tooltip-color': colors.grey.cool_blue,
   // Tooltip background color
   '@tooltip-bg': colors.white,
   // // Tooltip arrow width
@@ -448,7 +448,7 @@ module.exports = {
   // '@modal-footer-border-color-split': '@border-color-split',
   '@modal-footer-padding-vertical': '30px',
   '@modal-footer-padding-horizontal': '21px',
-  '@modal-mask-bg': `fade(${colors.dark_blue}, 80%)`,
+  '@modal-mask-bg': `fade(${colors.blue.dark}, 80%)`,
 
   // Progress
   // --
@@ -498,15 +498,15 @@ module.exports = {
   // --
   // '@table-bg': '@component-background',
   '@table-header-bg': '#fff', // '@background-color-light',
-  '@table-header-color': colors.cool_grey_blue,
+  '@table-header-color': colors.grey.cool_blue,
   // '@table-header-sort-bg': '@background-color-base',
   // '@table-body-sort-bg': rgba(0, 0, 0, 0.01)',
-  '@table-row-hover-bg': colors.light_grey, // '@item-hover-bg',
+  '@table-row-hover-bg': colors.grey.light, // '@item-hover-bg',
   // '@table-selected-row-color': inherit',
   // '@table-selected-row-bg': '@primary-1',
   // '@table-body-selected-sort-bg': '@table-selected-row-bg',
   // '@table-selected-row-hover-bg': '@table-selected-row-bg',
-  '@table-expanded-row-bg': colors.light_grey,
+  '@table-expanded-row-bg': colors.grey.light,
   '@table-padding-vertical': '10px',
   '@table-padding-horizontal': '15px',
   // '@table-border-radius-base': '@border-radius-base',
@@ -681,10 +681,10 @@ module.exports = {
   // Slider
   // ---
   // '@slider-margin': 10px 6px 10px',
-  '@slider-rail-background-color': colors.light_blue,
-  '@slider-rail-background-color-hover': colors.light_blue,
-  '@slider-track-background-color': colors.clear_blue,
-  '@slider-track-background-color-hover': colors.clear_blue,
+  '@slider-rail-background-color': colors.blue.light,
+  '@slider-rail-background-color-hover': colors.blue.light,
+  '@slider-track-background-color': colors.blue.clear,
+  '@slider-track-background-color-hover': colors.blue.clear,
   '@slider-handle-border-width': 0,
   '@slider-handle-background-color': 'white',
   '@slider-handle-color': 'white',

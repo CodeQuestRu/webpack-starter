@@ -48,8 +48,8 @@ module.exports = {
 
   // Css Loader
   css: {
-    importLoaders: 1,
-    modules: true
+    // importLoaders: 1,
+    // modules: true
   },
 
   // PostCSS Loader

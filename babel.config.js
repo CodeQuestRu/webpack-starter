@@ -9,10 +9,11 @@ module.exports = (api) => {
     ],
 
     plugins: [
+      require('./_starter/babel/plugins/macros'),
       require('./_starter/babel/plugins/import-antd'),
-      require('./_starter/babel/plugins/import-lodash'),
+      // require('./_starter/babel/plugins/import-lodash'),
       require('./_starter/babel/plugins/module-resolver'),
-      require('./_starter/babel/plugins/const-enum'),
+      // require('./_starter/babel/plugins/const-enum'),
     ]
   }
 }

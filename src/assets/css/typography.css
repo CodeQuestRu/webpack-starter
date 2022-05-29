@@ -1,0 +1,301 @@
+/* TODO: шрифты работают с next-fonts 1.0.3, но не с 1.1.0 */
+
+@font-face {
+  font-family: PF Din Display Pro;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/PFDinDisplayPro-Light.woff2') format('woff2'),
+    url('../fonts/PFDinDisplayPro-Light.woff') format('woff');
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: PF Din Display Pro;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/PFDinDisplayPro-Regular.woff2') format('woff2'),
+    url('../fonts/PFDinDisplayPro-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: PF Din Display Pro;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/PFDinDisplayPro-Medium.woff2') format('woff2'),
+    url('../fonts/PFDinDisplayPro-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: PF Din Display Pro;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/PFDinDisplayPro-Bold.woff2') format('woff2'),
+    url('../fonts/PFDinDisplayPro-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: PF Din Display Pro;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/PFDinDisplayPro-Black.woff2') format('woff2'),
+    url('../fonts/PFDinDisplayPro-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: PF Din Display Pro;
+  font-style: italic;
+  font-weight: 300;
+  src: url('../fonts/PFDinDisplayPro-LightItalic.woff2') format('woff2')
+    url('../fonts/PFDinDisplayPro-LightItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: PF Din Display Pro;
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/PFDinDisplayPro-Italic.woff2') format('woff2')
+    url('../fonts/PFDinDisplayPro-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: PF Din Display Pro;
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/PFDinDisplayPro-MediumItalic.woff2') format('woff2')
+    url('../fonts/PFDinDisplayPro-MediumItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: PF Din Display Pro;
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/PFDinDisplayPro-BoldItalic.woff2') format('woff2')
+    url('../fonts/PFDinDisplayPro-BoldItalic.woff') format('woff');
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl;
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/MuseoSansCyrl-Light.woff2') format('woff2'),
+    url('../fonts/MuseoSansCyrl-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/MuseoSansCyrl-Light-2.woff2') format('woff2'),
+    url('../fonts/MuseoSansCyrl-Light-2.woff') format('woff');
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/MuseoSansCyrl-Medium.woff2') format('woff2'),
+    url('../fonts/MuseoSansCyrl-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/MuseoSansCyrl-Bold.woff2') format('woff2'),
+    url('../fonts/MuseoSansCyrl-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Roboto_Bold.woff2') format('woff2'),
+    url('../fonts/Roboto_Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/Roboto_Black.woff2') format('woff2'),
+    url('../fonts/Roboto_Black.woff') format('woff');
+}
+
+#app {
+  .h1 {
+    @apply text-h1 leading-30 tracking-03 font-light;
+  }
+
+  .h2 {
+    @apply text-h2 leading-25 tracking-05 font-medium;
+
+    &_bold {
+      @apply font-bold uppercase;
+    }
+  }
+
+  .h3 {
+    @apply text-h3 leading-25 tracking-03 font-light;
+
+    &_medium {
+      @apply tracking-05 font-medium;
+    }
+  }
+
+  .h4 {
+    @apply text-h4 leading-25 tracking-05 font-medium;
+
+    &_bold {
+      @apply font-bold;
+    }
+    &_light {
+      @apply font-light;
+    }
+  }
+
+  .p1 {
+    @apply text-p1 leading-20 tracking-03 font-light;
+
+    &_normal {
+      @apply font-normal;
+    }
+
+    &_medium {
+      @apply tracking-05 font-medium;
+    }
+
+    &_bold {
+      @apply tracking-05 font-bold;
+    }
+  }
+
+  .p2 {
+    @apply text-p2 leading-20 tracking-03 font-light;
+
+    &_medium {
+      @apply tracking-05 font-medium;
+    }
+
+    &_bold {
+      @apply tracking-05 font-bold;
+    }
+  }
+
+  .p3 {
+    @apply text-p3 leading-20 tracking-03 font-light;
+
+    &_medium {
+      @apply tracking-05 font-medium;
+    }
+
+    &_breadcrumb {
+      @apply uppercase;
+    }
+  }
+
+  .p4 {
+    @apply text-p4 leading-15 tracking-03 font-light;
+
+    &_medium {
+      @apply font-medium;
+    }
+
+    &_color {
+      &_cool_grey_blue {
+        @apply text-cool_grey_blue;
+      }
+    }
+  }
+
+  .list-disc-clear_blue {
+    list-style-type: disc;
+    li {
+      @apply text-clear_blue mr-10;
+
+      &:not(:last-child) {
+        @apply mb-10;
+      }
+
+      & span,
+      p,
+      div {
+        @apply text-dark_blue;
+
+        &.text-cool_grey_blue {
+          @apply text-cool_grey_blue;
+        }
+      }
+
+      & .p4 {
+        @apply text-orange;
+      }
+
+      & .ant-btn-link span {
+        @apply text-clear_blue;
+
+        &:hover {
+          @apply text-orange;
+        }
+      }
+    }
+  }
+
+  .list-decimal-dark_blue {
+    list-style-type: decimal;
+    li {
+      @apply text-dark_blue mr-10 mb-20 pl-7 text-p1;
+
+      & span,
+      p,
+      div {
+        @apply text-dark_blue text-p1;
+
+        &.text-cool_grey_blue {
+          @apply text-cool_grey_blue;
+        }
+      }
+    }
+  }
+
+  a.pseudo-link {
+    @apply text-clear_blue border-b border-clear_blue border-dashed;
+
+    &:hover {
+      @apply text-orange border-orange;
+    }
+
+    &_color_orange {
+      @apply text-orange border-b border-orange border-dashed;
+    }
+
+    &[disabled] {
+      @apply opacity-50 pointer-events-none;
+    }
+  }
+
+  a.link {
+    @apply text-p1 leading-20 tracking-03 font-light text-clear_blue;
+
+    &_p2 {
+      @apply text-p2;
+    }
+
+    &_dark {
+      @apply text-dark_blue;
+    }
+
+    &_active {
+      @apply text-orange;
+    }
+
+    &:hover {
+      @apply text-orange;
+    }
+
+    &[disabled],
+    &[aria-disabled='true'] {
+      @apply opacity-50 pointer-events-none;
+    }
+  }
+} /* end #app */

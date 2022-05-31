@@ -9,94 +9,118 @@ module.exports = {
     colors: {
       transparent: 'transparent',
 
-      // Черный и белый
       black: '#000',
       white: '#fff',
       white_5: 'rgba(255, 255, 255, 0.5)',
 
-      // Синий
-      clear_blue: '#2889f1',
-      clear_blue_light: '#94c4f8',
-      dark_clear_blue: '#0075C9',
-      dark_clear_blue_3: 'rgba(40, 137, 241, 0.3)',
-      light_blue: '#93C4F8',
-      light_blue_2: 'rgba(147, 196, 248, 0.1)',
-      blue: '#015AA6',
-      dark_blue: '#2a2b37',
+      // Синие
+      blue: {
+        DEFAULT: '#015AA6',
+        dark: '#2a2b37',
+        clear: '#2889f1',
+        clear_light: '#94c4f8',
+        dark_clear: '#0075C9',
+        dark_clear_3: 'rgba(40, 137, 241, 0.3)',
+        light: '#93C4F8',
+        light_2: 'rgba(147, 196, 248, 0.1)',
+      },
 
-      // Оранжевый
-      orange: '#fb6507',
-      orange_3: 'rgba(251, 101, 7, 0.3)',
-      orange_12: 'rgba(251, 101, 7, 0.12)',
-      orange_4: '#fee0cd',
-      orange_5: '#F08013',
-      orange_6: '#F59A29',
-      orange_juice: '#FF9900',
-      orange_juice_3: 'rgba(255, 191, 3, 0.3)',
-      orange_juice_1: 'rgba(255, 191, 3, 0.1)',
-      dark_orange: '#EB6507',
-      dark_orange_3: 'rgba(235, 101, 3, 0.3)',
-
-      // Топаз
-      topaz: '#19bf97',
-      topaz_3: 'rgba(25, 191, 151, 0.3)',
-      topaz_1: 'rgba(25, 191, 151, 0.1)',
-      topaz_2: 'rgba(25, 191, 151, 0.06)',
-      dark_topaz: '#00A887',
-      dark_topaz_3: 'rgba(25, 191, 151, 0.3)',
-
-      // Желтый
-      yellow: '#ffbf03',
-      yellow_1: '#ffbf0321',
-
-      // Серый
-      cool_grey_blue: '#959dac',
-      cool_grey_blue_2: '#F3F6F8',
-      cool_grey_blue_3: 'rgba(206, 209, 215, 0.3)',
-      silver_two: '#ced1d7',
-      pale_grey: '#e8eaf0',
-      pale_grey_two: '#f0f2f9',
-      grey: '#f3f6f8',
-      light_grey: '#F9FAFB',
-      light_grey_2: '#8D98A2',
-      light_grey_3: '#F7F7F7',
-      light_grey_4: '#F1F4F5',
+      // Оранжевые
+      orange: {
+        DEFAULT: '#fb6507',
+        3: 'rgba(251, 101, 7, 0.3)',
+        4: '#fee0cd',
+        5: '#F08013',
+        6: '#F59A29',
+        12: 'rgba(251, 101, 7, 0.12)',
+        juice: '#FF9900',
+        juice_3: 'rgba(255, 191, 3, 0.3)',
+        juice_1: 'rgba(255, 191, 3, 0.1)',
+        dark: '#EB6507',
+        dark_3: 'rgba(235, 101, 3, 0.3)',
+      },
 
       // Зеленый
-      green: '#009943',
-      green_3: 'rgba(0, 153, 67, 0.3)',
+      green: {
+        DEFAULT: '#009943',
+        3: 'rgba(0, 153, 67, 0.3)',
+      },
 
-      // Коричневый
-      brown: '#9B887A',
-      brown_3: 'rgba(155, 136, 122, 0.3)',
+      // Топаз
+      topaz: {
+        DEFAULT: '#19bf97',
+        1: 'rgba(25, 191, 151, 0.1)',
+        2: 'rgba(25, 191, 151, 0.06)',
+        3: 'rgba(25, 191, 151, 0.3)',
+        dark: '#00A887',
+        dark_3: 'rgba(25, 191, 151, 0.3)',
+      },
+
+      // Желтый      
+      yellow: {
+        DEFAULT: '#ffbf03',
+        1: '#ffbf0321',
+      },
+
+      // Серый
+      grey: {
+        DEFAULT: '#f3f6f8',
+        cool_blue: '#959dac',
+        cool_blue_2: '#F3F6F8',
+        cool_blue_3: 'rgba(206, 209, 215, 0.3)',
+        silver_two: '#ced1d7',
+        pale: '#e8eaf0',
+        pale_two: '#f0f2f9',
+        light: '#F9FAFB',
+        light_2: '#8D98A2',
+        light_3: '#F7F7F7',
+        light_4: '#F1F4F5',
+      },
+
+
+      // Коричневый     
+      brown: {
+        DEFAULT: '#9B887A',
+        brown_3: 'rgba(155, 136, 122, 0.3)',
+      },
 
       // Красный
-      dark_red: '#DA291C',
-      dark_red_3: 'rgba(218, 41, 28, 0.3)',
+      red: {
+        dark: '#DA291C',
+        dark_3: 'rgba(218, 41, 28, 0.3)',
+      },
+
 
       // Фиолетовый
-      dark_purple: '#702F8A',
-      dark_purple_3: 'rgba(112, 47, 138, 0.3)',
-      light_purple: '#6569AF',
-      light_purple_3: 'rgba(101, 105, 175, 0.3)',
+      purple: {
+        dark: '#702F8A',
+        dark_3: 'rgba(112, 47, 138, 0.3)',
+        light: '#6569AF',
+        light_3: 'rgba(101, 105, 175, 0.3)',
+      },
 
       // Ультрамарин
-      ultramarin: '#005AA6',
-      ultramarin_2: '#005095',
+      ultramarin: {
+        DEFAULT: '#005AA6',
+        2: '#005095',
+      },
 
       // Цвета курсов
-      course_yellow: '#FFBD14',
-      course_yellow_2: '#FDD034',
-      course_light_orange: '#FF9E18',
-      course_orange: '#EF7F1A',
-      course_dark_orange: '#E95129',
-      course_grey: '#91A1AF',
-      course_grey_2: '#8795A0',
-      course_grey_3: '#CED2D8',
-      course_green: '#45AB34',
-      course_blue: '#00A7E1',
-      course_blue_2: '#00A6E3',
-      course_blue_3: '#0471B6',
+      course: {
+        yellow: '#FFBD14',
+        yellow_2: '#FDD034',
+        light_orange: '#FF9E18',
+        orange: '#EF7F1A',
+        dark_orange: '#E95129',
+        grey: '#91A1AF',
+        grey_2: '#8795A0',
+        grey_3: '#CED2D8',
+        green: '#45AB34',
+        blue: '#00A7E1',
+        blue_2: '#00A6E3',
+        blue_3: '#0471B6',
+      }
+
     },
     spacing: {
       0: '0',
@@ -525,73 +549,5 @@ module.exports = {
       40: '40',
       50: '50',
     },
-  },
-  variants: {
-    accessibility: ['responsive', 'focus'],
-    alignContent: ['responsive'],
-    alignItems: ['responsive'],
-    alignSelf: ['responsive'],
-    appearance: ['responsive'],
-    backgroundAttachment: ['responsive'],
-    backgroundColor: ['responsive', 'hover', 'focus'],
-    backgroundPosition: ['responsive'],
-    backgroundRepeat: ['responsive'],
-    backgroundSize: ['responsive'],
-    borderCollapse: ['responsive'],
-    borderColor: ['responsive', 'hover', 'focus'],
-    borderRadius: ['responsive'],
-    borderStyle: ['responsive'],
-    borderWidth: ['responsive'],
-    boxShadow: ['responsive', 'hover', 'focus'],
-    cursor: ['responsive'],
-    display: ['responsive'],
-    fill: ['responsive'],
-    flex: ['responsive'],
-    flexDirection: ['responsive'],
-    flexGrow: ['responsive'],
-    flexShrink: ['responsive'],
-    flexWrap: ['responsive'],
-    float: ['responsive'],
-    fontFamily: ['responsive'],
-    fontSize: ['responsive'],
-    fontSmoothing: ['responsive'],
-    fontStyle: ['responsive'],
-    fontWeight: ['responsive', 'hover', 'focus'],
-    height: ['responsive'],
-    inset: ['responsive'],
-    justifyContent: ['responsive'],
-    letterSpacing: ['responsive'],
-    lineHeight: ['responsive'],
-    listStylePosition: ['responsive'],
-    listStyleType: ['responsive'],
-    margin: ['responsive'],
-    maxHeight: ['responsive'],
-    maxWidth: ['responsive'],
-    minHeight: ['responsive'],
-    minWidth: ['responsive'],
-    objectFit: ['responsive'],
-    objectPosition: ['responsive'],
-    opacity: ['responsive', 'hover', 'focus'],
-    order: ['responsive'],
-    outline: ['responsive', 'focus'],
-    overflow: ['responsive'],
-    padding: ['responsive'],
-    placeholderColor: ['responsive', 'focus'],
-    pointerEvents: ['responsive'],
-    position: ['responsive'],
-    resize: ['responsive'],
-    stroke: ['responsive'],
-    tableLayout: ['responsive'],
-    textAlign: ['responsive'],
-    textColor: ['responsive', 'hover', 'focus'],
-    textDecoration: ['responsive', 'hover', 'focus'],
-    textTransform: ['responsive'],
-    userSelect: ['responsive'],
-    verticalAlign: ['responsive'],
-    visibility: ['responsive'],
-    whitespace: ['responsive'],
-    width: ['responsive'],
-    wordBreak: ['responsive'],
-    zIndex: ['responsive'],
   }
 };

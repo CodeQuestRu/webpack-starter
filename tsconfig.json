@@ -29,6 +29,9 @@
       ],
       "@uikit/*": [
         "./components/*"
+      ],
+      "@config/*": [
+        "./config/*"
       ]
     }
   },

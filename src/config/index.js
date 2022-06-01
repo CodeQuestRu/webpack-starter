@@ -1,0 +1,1 @@
+export { default as theme } from './tailwind/theme';

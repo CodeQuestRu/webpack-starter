@@ -9,6 +9,7 @@ module.exports = [
       '@assets': './src/assets',
       '@icons': './src/assets/icons',
       '@uikit': './src/components',
+      '@config': './src/config',
     },
   },
 ];

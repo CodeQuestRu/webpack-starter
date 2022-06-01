@@ -1,76 +1,42 @@
 import React, { forwardRef } from 'react';
-import IButtonProps, { TType } from './Button.types';
 
-
-// import { PrimaryButton } from './Button.styles';
-
-
-// const ButtonComponent = ({ type, ...props }: IButtonProps) => {
-//   return (
-//     <PrimaryButton
-//       danger={type === 'danger'}
-//       {...props}
-//     />
-//   );
-// }
-
-// export default ButtonComponent;
-
-// import * as MyArr from './Button.styles';
-// console.log(MyArr.DangerButton);
-
+// Типы
 import {
-  DangerButton,
-  DefaultButton,
-  GhostButton,
-  LinkButton,
+  IButtonProps,
+  IComponentMap
+} from './Button.types';
+
+// Импортируем все кнопки
+import {
   PrimaryButton,
+  SuccessButton,
+  DangerButton,
+  LinkButton
 } from './Button.styles';
 
-// // TODO: расширить свойство type (добавить 'danger'), пока что any
-// // type ButtonType = ButtonProps['type'] | 'danger';
-// // export type IProps = Omit<ButtonProps, 'type'> & { type?: ButtonType; topaz?: boolean };
 
-// interface IProps extends ButtonProps {
-//   type?: "link" | "ghost" | "default" | "primary";
-//   topaz?: boolean;
-//   clearblue?: boolean;
-//   hideborder?: boolean;
-// }
+const Button = forwardRef(({
+  type = 'default',
+  invert = false,
+  ...props
+}: IButtonProps, ref) => {
 
-interface IComponentMap {
-  primary: any;
-  danger: any;
-  ghost: any;
-  link: any;
-  default: any;
-}
-
-const Button = forwardRef(({ type = 'default', ...props }: IButtonProps, ref) => {
   const componentMap: IComponentMap = {
+    default: PrimaryButton,
     primary: PrimaryButton,
+    success: SuccessButton,
     danger: DangerButton,
-    ghost: GhostButton,
-    link: LinkButton,
-    default: DefaultButton,
+    link: LinkButton
   };
 
-  // const type = props.type ?? 'default';
-
+  // Опредеояем нужную кнопку по ее типу
   const BtnComponent = componentMap[type];
 
-  const buttonProps = {
-    ref,
-    type: 'default',
-    ...props,
+  // Кнопка по умолчанию без заливки
+  if (type === 'default') invert = true;
 
-    // чтобы react не кидал warning
-    topaz: props.topaz ? String(props.topaz) : undefined,
-    clearblue: props.clearblue ? String(props.clearblue) : undefined,
-    hideborder: props.hideborder ? String(props.hideborder) : undefined,
-  };
-
-  return <BtnComponent {...buttonProps} danger={type === 'danger'} />;
+  // Создаем компоненты
+  return <BtnComponent {...props} invert={invert} danger={type === 'danger'} />;
 });
 
 export default Button;

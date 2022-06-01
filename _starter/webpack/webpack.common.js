@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 
 // Плагины
@@ -30,6 +31,10 @@ const common = {
   plugins: [
     // Формирование шаблона
     new HtmlWebpackPlugin(options.html_wp),
+
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
 
     // new SpriteLoaderPlugin({
     //   plainSprite: true

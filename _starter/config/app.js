@@ -1,14 +1,10 @@
-const {
-  source,
-  assets,
-  build,
-  config,
-  loaders,
-  webpack
-} = require('./paths');
+const { resolve } = require('path');
+
+// Пути
+const paths = require('./paths');
 
 // Вставка переменных
-const themeVariables = require(config + '/antd/antd-variables');
+const themeVariables = require(resolve(paths.config, './antd/antd-variables'));
 
 // Конфигурация
 module.exports = {
@@ -19,23 +15,23 @@ module.exports = {
 
   // Входные точки
   entry: [
-    source + '/index.tsx'
+    resolve(paths.source, './index.tsx')
   ],
 
   // Выходная точка
   output: {
-    path: build,
+    path: paths.build,
     filename: '[name].[contenthash].js', // Поддержка кеширования
     clean: true
   },
 
   // Сервер
   devServer: {
-    static: build
+    static: paths.build
   },
 
   // Расширения для импорта
-  extensions: [".ts", ".tsx", ".js"],
+  extensions: [".ts", ".tsx", ".js", ".jsx"],
 
 
   /**
@@ -85,7 +81,7 @@ module.exports = {
 
   // SVG
   svg: {
-    name: assets + `/[name].[ext]`
+    name: resolve(paths.assets, './[name].[ext]')
   },
 
   // SVGR
@@ -93,7 +89,7 @@ module.exports = {
 
   // SVG Sprite
   svg_sprite: {
-    runtimeGenerator: loaders + '/svg-sprite-loader/runtime-generator'
+    runtimeGenerator: resolve(paths.utils, './svg-sprite-loader/runtime-generator')
   },
 
   // TypeScript
@@ -106,7 +102,7 @@ module.exports = {
 
   // HTML Webpack Plugin
   html_wp: {
-    template: webpack + '/static/template.html',
+    template: resolve(paths.static, './template.html'),
     title: 'Webpack-starter by CodeQuest'
   }
 }

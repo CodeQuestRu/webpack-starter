@@ -14,8 +14,8 @@ const build = appRoot.resolve('./dist');
 
 // Путь до стартера
 const starter = appRoot.resolve('./_starter');
-const webpack = resolve(starter, './webpack');
-const loaders = resolve(webpack, './loaders');
+const static = resolve(starter, './static');
+const utils = resolve(starter, './utils');
 
 
 module.exports = {
@@ -25,6 +25,6 @@ module.exports = {
   config,
   build,
   starter,
-  webpack,
-  loaders
+  static,
+  utils
 }

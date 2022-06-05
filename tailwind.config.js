@@ -2,7 +2,7 @@ module.exports = {
 
   // Настройка темы
   presets: [
-    require('./_starter/tailwind/preset')
+    require('./src/config/tailwind/preset')
   ],
 
   // Расположение файлов
